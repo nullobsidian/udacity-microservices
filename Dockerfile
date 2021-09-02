@@ -13,8 +13,10 @@ COPY . app.py /app/
 ## Step 3:
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
-RUN make install &&\
+RUN make setup &&\
+		make install &&\
 		wget -q https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64 -P /usr/local/bin/ &&\
+		mv /usr/local/bin/hadolint-Linux-x86_64 /usr/local/bin/hadolint &&\
 		chmod +x /usr/local/bin/hadolint &&\
 		pip --no-cache-dir install pylint
 
