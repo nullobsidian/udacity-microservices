@@ -14,6 +14,7 @@ COPY . app.py /app/
 # Install packages from requirements.txt
 # hadolint ignore=DL3013
 RUN pip --no-cache-dir install virtualenv &&\
+	mkdir ~/.devops &&\
 	make setup &&\
 	make install &&\
 	wget -q https://github.com/hadolint/hadolint/releases/download/v${HADOLINT_VERSION}/hadolint-Linux-x86_64 -P /usr/local/bin/ &&\

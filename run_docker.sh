@@ -12,4 +12,4 @@ docker image ls
 
 # Step 3: 
 # Run flask app
-docker run --name flask-app -p 80:8080 udacity-microservices:latest
+docker run --name flask-app -p 8080:80 udacity-microservices:latest
