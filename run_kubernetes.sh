@@ -6,6 +6,7 @@
 # This is your Docker ID/path
 # dockerpath=<>
 dockerpath='nullobsidian/udacity-microservices'
+
 # Step 2
 # Run the Docker Hub container with kubernetes
 kubectl run prod-flask-app --image=$dockerpath:latest --port=80
