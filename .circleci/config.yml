@@ -28,7 +28,7 @@ jobs:
           paths:
             - "./venv"
       - run: # run lint!
-        name: run lint
-        command: |
-          . venv/bin/activate
-          make lint
+          name: run lint
+          command: |
+            . venv/bin/activate
+            make lint
