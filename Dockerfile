@@ -11,7 +11,7 @@ RUN python -m venv $VIRTUAL_ENV
 
 COPY . app.py /app/
 RUN make install &&\
-	curl -LO https://github.com/hadolint/hadolint/releases/download/v"${HADOLINT_VERSION}"/hadolint-Linux-x86_64 &&\
+	curl -sLO https://github.com/hadolint/hadolint/releases/download/v"${HADOLINT_VERSION}"/hadolint-Linux-x86_64 &&\
 	mv hadolint-Linux-x86_64 /usr/local/bin/hadolint &&\
 	chmod +x /usr/local/bin/hadolint &&\
 	pip install --no-cache-dir pylint=="${PYLINT_VERSION}"
