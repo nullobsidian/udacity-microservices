@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build . -t udacity-microservices:latest
+docker build . -t nullobsidian/udacity-microservices
 
 # Step 2: 
 # List docker images
