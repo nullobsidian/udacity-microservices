@@ -11,7 +11,9 @@ dockerpath='nullobsidian/udacity-microservices'
 
 # Step 2:  
 # Authenticate & tag
+cat ~/my_password.txt | docker login --username nullobsidian --password-stdin
 echo "Docker ID and Image: $dockerpath"
+docker tag microservices $dockerpath
 
 # Step 3:
 # Push image to a docker repository
