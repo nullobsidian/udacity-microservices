@@ -1,1 +1,11 @@
-<paste log output from Kubernetes-mediated prediction, here>
+➜  udacity-microservices git:(main) ./run_kubernetes.sh              
+pod/prod-flask-app created
+NAME             READY   STATUS              RESTARTS   AGE
+prod-flask-app   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+➜  udacity-microservices git:(main) ./run_kubernetes.sh
+Error from server (AlreadyExists): pods "prod-flask-app" already exists
+NAME             READY   STATUS    RESTARTS   AGE
+prod-flask-app   1/1     Running   0          11s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
